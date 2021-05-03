@@ -1,0 +1,138 @@
+/* Kamban ======== */
+
+.kamban{
+    font-size: 24px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cardKamban{
+    padding: 10px;
+    width: 150px;
+    height: 100px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cardKamban h3 {
+    font-size: 24px;
+}
+
+#cardTotalLeads{
+    background-color: rgb(238, 235, 230);
+}
+
+#cardLeadsEmAndamento{
+    background-color: rgb(255, 187, 0);
+
+}
+
+#cardRetornar{
+    background-color: yellow;
+}
+
+#cardLeadsFechado{
+    background-color: green;
+}
+
+/* Card ============ */
+
+.card{
+    display:flex;
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: rgb(233, 232, 232);
+    align-items: center;
+    border-radius: 5px;
+    border: rgb(182, 169, 169) 0.5px solid;
+}
+
+.card .name{
+    width: 230px;
+    margin-left: 5px;
+}
+
+.card .numberConvidados{
+    width: 150px;
+    text-align: center;
+}
+
+.card .dateFesta{
+    width: 150px;
+    text-align: center;
+}
+
+.card .status{
+    width: 150px;
+    text-align: center;
+    background-color:rgb(250, 250, 101);
+    border-radius: 20px;
+}
+
+.card .button{
+    width: 80px;
+    margin-left: 20px;
+    justify-content: right;
+}
+
+.card button {
+    margin-left: 10px;
+}
+
+/* Cards ======== */
+
+.button-add{
+    justify-content: right;
+    display: grid;
+    margin-bottom: 50px;
+}
+
+.buttonNovoLead{
+    background-color: rgb(97, 228, 85);
+    width: 250px;
+    padding: 5px;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.card-header{
+    display:flex;
+    height: 50px;
+    margin-bottom: 5px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.card-header .name{
+    width: 230px;
+    text-align:justify;
+    margin-left: 5px;
+}
+
+.card-header .numberConvidados{
+    width: 150px;
+    text-align: center;
+}
+
+.card-header .dateFesta{
+    width: 150px;
+    text-align: center;
+}
+
+.card-header .status{
+    width: 150px;
+    text-align: center;
+}
+
+.card-header .button{
+    width: 80px;
+    margin-left: 20px;
+    justify-content: right;
+}

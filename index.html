@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Leads</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/card.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar">
+                <div id="menu">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Cadastro</a></li> 
+                    </ul>
+                </div>
+                <div id="usuario">
+                    <p>Nome Usuario</p>
+                    <div id="foto">
+                        <a href=""><img src="./img/usuário-sem-foto.png" alt="fotoUsuario"></a>
+
+                    <a href="" >Ver Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="kamban">
+            <div class="cardKamban" id="cardTotalLeads">
+                <h3>Total Leads</h3>
+                <p>20</p>
+            </div>
+
+            <div class="cardKamban" id="cardLeadsEmAndamento">
+                <h3>Entrar em contato</h3>
+                <p>10</p>
+            </div>
+
+            <div class="cardKamban" id="cardRetornar">
+                <h3>Retornar</h3>
+                <p>5</p>
+            </div>
+            
+            <div class="cardKamban" id="cardLeadsFechado">
+                <h3>Fechados</h3>
+                <p>5</p>
+            </div>
+        </section>
+        
+        <section class="button-add">
+            <a class="buttonNovoLead" href="" > 
+                <img src="./img/plus-24.svg" alt=""> Adicionar novo Lead
+            </a>
+        </section>
+        
+        <section class="cards">
+            <div class="card-header">
+                <div class="name">
+                    <h4>Cliente</h4> 
+                </div>
+                <div class="numberConvidados">
+                    <h4>Nº de Convidados</h4>
+                </div>
+                <div class="dateFesta">
+                    <h4>Data do Evento</h4>
+                </div>
+                <div class="status">
+                    <h4>Status</h4>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="name">
+                    <h3>Fabio Pegoraro</h3> 
+                </div>
+                <div class="numberConvidados">
+                    <h3>100</h3>
+                </div>
+                <div class="dateFesta">
+                    <h3>19/05/2021</h3>
+                </div>
+                <div class="status">
+                    <h3>Em andamento</h3>
+                </div>
+                <div class="button">
+                    <a href="" ><img src="./img/edit-24.svg" alt=""></a>
+                    <button class="delete" title="Excluir Lead">
+                        <img src="./img/trash-24.svg" alt="Excluir Lead">
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="name">
+                    <h3>Maise Pereira</h3> 
+                </div>
+                <div class="numberConvidados">
+                    <h3>50</h3>
+                </div>
+                <div class="dateFesta">
+                    <h3>12/12/2021</h3>
+                </div>
+                <div class="status">
+                    <h3>Fechado</h3>
+                </div>
+                <div class="button">
+                    <a href="" ><img src="./img/edit-24.svg" alt=""></a>
+                    <button class="delete" title="Excluir Lead">
+                        <img src="./img/trash-24.svg" alt="Excluir Lead">
+                    </button>
+                </div>
+            </div>
+
+            
+        </section>
+
+    </main>
+
+</body>
+</html>
