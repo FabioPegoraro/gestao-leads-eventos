@@ -58,25 +58,28 @@
         </section>
 
         <section class="button-add">
-            <a class="buttonNovoLead" href="">
+            <a href="#" onclick="Modal.open()">
                 <img src="./img/plus-24.svg" alt=""> Adicionar novo Lead
             </a>
         </section>
 
         <section class="cards">
             <div class="card-header">
-                <div class="icon">
-                    <img src="./img/ferramenta-de-controle-de-temperatura-de-febre-medica-termometro.svg" alt="">
+                <div class="idCliente">
+                    
                 </div>
                 <div class="name">
                     <h4>Cliente</h4>
                 </div>
+
                 <div class="numberConvidados">
                     <h4>Nº de Convidados</h4>
                 </div>
+
                 <div class="dateFesta">
                     <h4>Data do Evento</h4>
                 </div>
+
                 <div class="status">
                     <h4>Status</h4>
                 </div>
@@ -87,35 +90,41 @@
             </div>
 
             <div class="card">
-                <div class="cardTermometro">
-                    <img src="./img/istockphoto-590051308-170667a.jpg" alt="" class="icon">
+                <div class="idCliente">
+                    <p>1</p>
                 </div>
+
                 <div class="cardName">
                     <h3>Fabio Pegoraro</h3>
                 </div>
+
                 <div class="cardNumberConvidados">
                     <h3>100</h3>
                 </div>
+
                 <div class="cardDateFesta">
                     <h3>19/05/2021</h3>
                 </div>
+
                 <div class="card-status fechamento">
                     <h3>Fechamento</h3>
                 </div>
+
                 <div class="cardNextContato">
                     <h3>10/05/2021</h3>
                 </div>
-                <div class="button-excluir">
-                    <a href=""><img src="./img/edit-24.svg" alt=""></a>
-                    <button class="delete" title="Excluir Lead">
-                        <img src="./img/trash-24.svg" alt="Excluir Lead">
-                    </button>
+
+                <div class="card-Button">
+                    <a href="#" class="buttonEditar" onclick="Cards.editarCard()"><img src="./img/edit-24.svg" alt=""></a>
+                    
+                    <a href="#"class="buttonExcluir" onclick="Cards.excluirCard()"><img src="./img/trash-24.svg" alt="Excluir Lead"></a>
+                    
                 </div>
             </div>
 
             <div class="card">
-                <div class="termometro">
-                    <img src="./img/floco de neve.jpg" alt="" class="icon">
+                <div class="idCliente">
+                    <p>1</p>
                 </div>
                 <div class="cardName">
                     <h3>Fabio Pegoraro</h3>
@@ -132,17 +141,17 @@
                 <div class="cardNextContato">
                     <h3>10/05/2021</h3>
                 </div>
-                <div class="button-excluir">
-                    <a href=""><img src="./img/edit-24.svg" alt=""></a>
-                    <button class="delete" title="Excluir Lead">
-                        <img src="./img/trash-24.svg" alt="Excluir Lead">
-                    </button>
+                <div class="card-Button">
+                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
+                    
+                    <img class="buttonExcluir"src="./img/trash-24.svg" alt="Excluir Lead">
+                    
                 </div>
             </div>
 
             <div class="card">
-                <div class="termometro">
-                    <img src="./img/floco de neve.jpg" alt="" class="icon">
+                <div class="idCliente">
+                    <p>1</p>
                 </div>
                 <div class="cardName">
                     <h3>Fabio Pegoraro</h3>
@@ -159,17 +168,17 @@
                 <div class="cardNextContato">
                     <h3>10/05/2021</h3>
                 </div>
-                <div class="button-excluir">
-                    <a href=""><img src="./img/edit-24.svg" alt=""></a>
-                    <button class="delete" title="Excluir Lead">
-                        <img src="./img/trash-24.svg" alt="Excluir Lead">
-                    </button>
+                <div class="card-Button">
+                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
+                    
+                    <img class="buttonExcluir"src="./img/trash-24.svg" alt="Excluir Lead">
+                    
                 </div>
             </div>
 
             <div class="card">
-                <div class="termometro">
-                    <img src="./img/istockphoto-590051308-170667a.jpg" alt="" class="icon">
+                <div class="idCliente">
+                    <p>1</p>
                 </div>
                 <div class="cardName">
                     <h3>Fabio Pegoraro</h3>
@@ -186,92 +195,100 @@
                 <div class="cardNextContato">
                     <h3>10/05/2021</h3>
                 </div>
-                <div class="button-excluir">
-                    <a href=""><img src="./img/edit-24.svg" alt=""></a>
-                    <button class="delete" title="Excluir Lead">
-                        <img src="./img/trash-24.svg" alt="Excluir Lead">
-                    </button>
+                <div class="card-Button">
+                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
+                    
+                    <img class="buttonExcluir" onclick="" src="./img/trash-24.svg" alt="Excluir Lead">
+                    
                 </div>
             </div>
             </div>
         </section>
     </main>
 
-    <div class="modal-overlay active">
+    <div class="modal-overlay ">
         <div class="modal">
             <div class="form">
-                <h2>Adionar Lead</h2>
+                <h2>Adicionar Lead</h2>
                 <form action="">
-                    <div class="input-group-1">
 
-                        <!-- Nome cliente  -->
-
+                    <div class="input-group">
                         <label class="sr-only" for="nameClient">Nome do Cliente</label>
                         <input type="text" id="nameClient" name="nameClient" placeholder="Nome do Cliente" />
+                    </div>
 
-                        <!-- Tipo de Evento e Numero de convidados  -->
-
+                    <div class="input-group">                    
                         <label class="sr-only" for="typeEvent">Tipo de Evento</label>
                         <input type="text" id="typeEvent" name="typeEvent" placeholder="Tipo de Evento" />
+                        
                         <label class="sr-only" for="numberGuests">Numero Convidados</label>
                         <input type="number" id="numberGuests" name="numberGuests" placeholder="Numero Convidados" />
+                    </div>
 
-                        <!-- Data do Evento e telefone  -->
-
+                    <div class="input-group">                    
                         <label class="sr-only" for="dateEvent">Data do Evento</label>
-                        <input type="date" id="dateEvent" name="dateEvent" placeholder="Data do Evento" />
+                        <input type="text" id="dateEvent" name="dateEvent" placeholder="Data do Evento" />
+                        
                         <label class="sr-only" for="emailClient">Telefone</label>
                         <input type="number" id="phoneClient" name="phoneClient" placeholder="Telefone" />
+                    </div> 
 
-                        <!-- Local do Evento e email  -->
-
+                    <div class="input-group">
                         <label class="sr-only" for="eventLocation">Local do Evento</label>
                         <input type="text" id="eventLocation" name="eventLocation" placeholder="Local do Evento" />
+    
                         <label class="sr-only" for="emailClient">Email</label>
                         <input type="mail" id="emailClient" name="emailClient" placeholder="Email" />
+                    </div>
 
-                        <!-- Enviado Por, Data 1º contato e Data Ultimo Contato  -->
-
-                        <label placeholder="Foi" class="dateFirstContact" for="dateFirstContact">Data 1º contato</label>
-
-                        <label class="dateLastContact" for="dateLastContact">Data Ultimo Contato</label>
-
-                        <input type="date" id="dateFirstContact" name="dateFirstContact"
-                            placeholder="Data 1º contato" />
-
-                        <input type="date" id="dateLastContact" name="dateLastContact"
+                    <div class="input-group">
+                        <label class="sr-only" for="dateFirstContact">Data 1º contato</label>
+                        <input type="text" id="dateFirstContact" name="dateFirstContact"
+                        placeholder="Data 1º contato" />
+                        
+                        <label class="sr-only" for="dateLastContact">Data Ultimo Contato</label>
+                        <input type="text" id="dateLastContact" name="dateLastContact"
                             placeholder="Data Ultimo Contato" />
+                    </div>  
 
-
-                        <!-- Canal que veio, Como nos Conheceu, Status  -->
-
+                    <div class="input-group">
                         <label class="sr-only" for="sendBy">Enviado por</label>
                         <input type="text" id="sendBy" name="sendBy" placeholder="Enviado por" />
+                        
                         <label class="sr-only" for="channelThatCame">Canal que veio</label>
                         <input type="text" id="channelThatCame" name="channelThatCame" placeholder="Canal que veio" />
+                    </div>
+                    
+                    <div class="input-group">
                         <label class="sr-only" for="comoNosConheceu">Como nos Conheceu</label>
                         <input type="text" id="comoNosConheceu" name="comoNosConheceu"
                             placeholder="Como nos Conheceu" />
                         <label class="sr-only" for="status">Status</label>
-                        <input type="text" id="status" name="status" placeholder="Status" />
+                        <input type="text" id="status" name="status" placeholder="Status" />     
+                    </div>
 
-                        <!-- Observação e cadastrar Cliente -->
-
+                    <div class="input-group">
                         <label class="sr-only" for="observacao">Observação</label>
                         <textarea name="observacao" id="observacao" placeholder="Observação"></textarea>
                     </div>
+                
+                    <div class="input-group actions">
+                        <!-- <div class="buttonForm actions">
+
+                        </div> -->
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                    
+                        <button class="button salvar">Salvar</button>
+    
+                    </div>
+
                 </form>
-                <div class="buttonForm">
-
-                    <button class="buttonCancel">Cancelar</button>
-                    <button class="buttonSave">Salvar</button>
-
-                </div>
+                
             </div>
         </div>
     </div>
 
-
+<script src="./script.js"></script>
 
 </body>
 
