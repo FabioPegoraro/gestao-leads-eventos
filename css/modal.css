@@ -1,0 +1,182 @@
+/* Modal ======== */
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #f0f2f5;
+    padding: 2.4rem;
+    width: 700px ;
+    height: 750px;
+    border-radius: 20px;
+}
+
+.modal h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#nameClient{
+    width: 100%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#typeEvent{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+#numberGuests{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: right;
+}
+
+#dateEvent{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    float: left;
+}
+
+#phoneClient{
+    width: 49%;
+    padding: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    float: right;
+}
+
+#eventLocation{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+#emailClient{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: right;
+}
+
+#dateFirstContact{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+.dateFirstContact{
+    width: 49%;
+    float: left;
+}
+
+#dateLastContact{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: right;
+}
+
+.dateLastContact{
+    width: 49%;
+    float: right;
+}
+
+#sendBy{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+#channelThatCame{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: right;
+}
+
+
+#comoNosConheceu{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+#status{
+    width: 49%;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    float: right;
+}
+
+#observacao{
+    width: 100%;
+    height: 150px;
+    padding: 6px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.buttonForm{
+    padding: 2px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.buttonCancel, .buttonSave{
+    font-size: 1.8rem;
+    padding: 8px;
+    border-radius: 20px;
+}
