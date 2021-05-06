@@ -63,10 +63,10 @@
             </a>
         </section>
 
-        <section class="cards">
+        <section class="cards" id="cards-leads">
             <div class="card-header">
                 <div class="idCliente">
-                    
+
                 </div>
                 <div class="name">
                     <h4>Cliente</h4>
@@ -89,120 +89,6 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="idCliente">
-                    <p>1</p>
-                </div>
-
-                <div class="cardName">
-                    <h3>Fabio Pegoraro</h3>
-                </div>
-
-                <div class="cardNumberConvidados">
-                    <h3>100</h3>
-                </div>
-
-                <div class="cardDateFesta">
-                    <h3>19/05/2021</h3>
-                </div>
-
-                <div class="card-status fechamento">
-                    <h3>Fechamento</h3>
-                </div>
-
-                <div class="cardNextContato">
-                    <h3>10/05/2021</h3>
-                </div>
-
-                <div class="card-Button">
-                    <a href="#" class="buttonEditar" onclick="Cards.editarCard()"><img src="./img/edit-24.svg" alt=""></a>
-                    
-                    <a href="#"class="buttonExcluir" onclick="Cards.excluirCard()"><img src="./img/trash-24.svg" alt="Excluir Lead"></a>
-                    
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="idCliente">
-                    <p>1</p>
-                </div>
-                <div class="cardName">
-                    <h3>Fabio Pegoraro</h3>
-                </div>
-                <div class="cardNumberConvidados">
-                    <h3>100</h3>
-                </div>
-                <div class="cardDateFesta">
-                    <h3>19/05/2021</h3>
-                </div>
-                <div class="card-status negociacao">
-                    <h3>Negociação</h3>
-                </div>
-                <div class="cardNextContato">
-                    <h3>10/05/2021</h3>
-                </div>
-                <div class="card-Button">
-                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
-                    
-                    <img class="buttonExcluir"src="./img/trash-24.svg" alt="Excluir Lead">
-                    
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="idCliente">
-                    <p>1</p>
-                </div>
-                <div class="cardName">
-                    <h3>Fabio Pegoraro</h3>
-                </div>
-                <div class="cardNumberConvidados">
-                    <h3>100</h3>
-                </div>
-                <div class="cardDateFesta">
-                    <h3>19/05/2021</h3>
-                </div>
-                <div class="card-status follow">
-                    <h3>Follow</h3>
-                </div>
-                <div class="cardNextContato">
-                    <h3>10/05/2021</h3>
-                </div>
-                <div class="card-Button">
-                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
-                    
-                    <img class="buttonExcluir"src="./img/trash-24.svg" alt="Excluir Lead">
-                    
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="idCliente">
-                    <p>1</p>
-                </div>
-                <div class="cardName">
-                    <h3>Fabio Pegoraro</h3>
-                </div>
-                <div class="cardNumberConvidados">
-                    <h3>100</h3>
-                </div>
-                <div class="cardDateFesta">
-                    <h3>19/05/2021</h3>
-                </div>
-                <div class="card-status fechado">
-                    <h3>Fechado</h3>
-                </div>
-                <div class="cardNextContato">
-                    <h3>10/05/2021</h3>
-                </div>
-                <div class="card-Button">
-                    <a href="" class="buttonEditar"><img src="./img/edit-24.svg" alt=""></a>
-                    
-                    <img class="buttonExcluir" onclick="" src="./img/trash-24.svg" alt="Excluir Lead">
-                    
-                </div>
-            </div>
-            </div>
         </section>
     </main>
 
@@ -217,26 +103,26 @@
                         <input type="text" id="nameClient" name="nameClient" placeholder="Nome do Cliente" />
                     </div>
 
-                    <div class="input-group">                    
+                    <div class="input-group">
                         <label class="sr-only" for="typeEvent">Tipo de Evento</label>
                         <input type="text" id="typeEvent" name="typeEvent" placeholder="Tipo de Evento" />
-                        
+
                         <label class="sr-only" for="numberGuests">Numero Convidados</label>
                         <input type="number" id="numberGuests" name="numberGuests" placeholder="Numero Convidados" />
                     </div>
 
-                    <div class="input-group">                    
+                    <div class="input-group">
                         <label class="sr-only" for="dateEvent">Data do Evento</label>
                         <input type="text" id="dateEvent" name="dateEvent" placeholder="Data do Evento" />
-                        
+
                         <label class="sr-only" for="emailClient">Telefone</label>
                         <input type="number" id="phoneClient" name="phoneClient" placeholder="Telefone" />
-                    </div> 
+                    </div>
 
                     <div class="input-group">
                         <label class="sr-only" for="eventLocation">Local do Evento</label>
                         <input type="text" id="eventLocation" name="eventLocation" placeholder="Local do Evento" />
-    
+
                         <label class="sr-only" for="emailClient">Email</label>
                         <input type="mail" id="emailClient" name="emailClient" placeholder="Email" />
                     </div>
@@ -244,51 +130,51 @@
                     <div class="input-group">
                         <label class="sr-only" for="dateFirstContact">Data 1º contato</label>
                         <input type="text" id="dateFirstContact" name="dateFirstContact"
-                        placeholder="Data 1º contato" />
-                        
+                            placeholder="Data 1º contato" />
+
                         <label class="sr-only" for="dateLastContact">Data Ultimo Contato</label>
                         <input type="text" id="dateLastContact" name="dateLastContact"
                             placeholder="Data Ultimo Contato" />
-                    </div>  
+                    </div>
 
                     <div class="input-group">
                         <label class="sr-only" for="sendBy">Enviado por</label>
                         <input type="text" id="sendBy" name="sendBy" placeholder="Enviado por" />
-                        
+
                         <label class="sr-only" for="channelThatCame">Canal que veio</label>
                         <input type="text" id="channelThatCame" name="channelThatCame" placeholder="Canal que veio" />
                     </div>
-                    
+
                     <div class="input-group">
                         <label class="sr-only" for="comoNosConheceu">Como nos Conheceu</label>
                         <input type="text" id="comoNosConheceu" name="comoNosConheceu"
                             placeholder="Como nos Conheceu" />
                         <label class="sr-only" for="status">Status</label>
-                        <input type="text" id="status" name="status" placeholder="Status" />     
+                        <input type="text" id="status" name="status" placeholder="Status" />
                     </div>
 
                     <div class="input-group">
                         <label class="sr-only" for="observacao">Observação</label>
                         <textarea name="observacao" id="observacao" placeholder="Observação"></textarea>
                     </div>
-                
+
                     <div class="input-group actions">
                         <!-- <div class="buttonForm actions">
 
-                        </div> -->
+                            </div> -->
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
-                    
+
                         <button class="button salvar">Salvar</button>
-    
+
                     </div>
 
                 </form>
-                
+
             </div>
         </div>
     </div>
 
-<script src="./script.js"></script>
+    <script src="./JS/script.js"></script>
 
 </body>
 
