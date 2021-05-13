@@ -36,29 +36,29 @@
         <section class="kamban">
             <div class="cardKamban" id="cardTotalLeads">
                 <h3>Total Leads</h3>
-                <p>20</p>
+                <p id="totalLeads"></p>
             </div>
 
 
             <div class="cardKamban" id="cardFollow">
                 <h3>Follow</h3>
-                <p>10</p>
+                <p id="totalFollow"></p>
             </div>
 
             <div class="cardKamban" id="cardNegociacao">
                 <h3>Em Negociação</h3>
-                <p>5</p>
+                <p id="totalNegociacao"></p>
             </div>
 
 
             <div class="cardKamban" id="cardFechamento">
                 <h3>Fechamento</h3>
-                <p>5</p>
+                <p id="totalFechamento"></p>
             </div>
         </section>
 
         <section class="button-add">
-            <a href="#" onclick="Modal.open()">
+            <a href="#" onclick="ModalAddLead.open()">
                 <img src="./img/plus-24.svg" alt=""> Adicionar novo Lead
             </a>
         </section>
@@ -92,7 +92,7 @@
         </section>
     </main>
 
-    <div class="modal-overlay ">
+    <div class="modal-add-lead">
         <div class="modal">
             <div class="form">
                 <h2>Adicionar Lead</h2>
@@ -162,7 +162,7 @@
                         <!-- <div class="buttonForm actions">
 
                             </div> -->
-                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <a href="#" onclick="ModalAddLead.close()" class="button cancel">Cancelar</a>
 
                         <button class="button salvar">Salvar</button>
 
@@ -173,6 +173,88 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-edit-lead">
+        <div class="modal">
+            <div class="form">
+                <h2>Editar Lead</h2>
+                <form action="">
+
+                    <div class="input-group">
+                        <label class="sr-only" for="nameClient">Nome do Cliente</label>
+                        <input type="text" id="nameClient" name="nameClient" placeholder="Nome do Cliente" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="typeEvent">Tipo de Evento</label>
+                        <input type="text" id="typeEvent" name="typeEvent" placeholder="Tipo de Evento" value="" />
+
+                        <label class="sr-only" for="numberGuests">Numero Convidados</label>
+                        <input type="number" id="numberGuests" name="numberGuests" placeholder="Numero Convidados" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="dateEvent">Data do Evento</label>
+                        <input type="text" id="dateEvent" name="dateEvent" placeholder="Data do Evento" value=""/>
+
+                        <label class="sr-only" for="emailClient">Telefone</label>
+                        <input type="number" id="phoneClient" name="phoneClient" placeholder="Telefone" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="eventLocation">Local do Evento</label>
+                        <input type="text" id="eventLocation" name="eventLocation" placeholder="Local do Evento" value=""/>
+
+                        <label class="sr-only" for="emailClient">Email</label>
+                        <input type="mail" id="emailClient" name="emailClient" placeholder="Email" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="dateFirstContact">Data 1º contato</label>
+                        <input type="text" id="dateFirstContact" name="dateFirstContact"
+                            placeholder="Data 1º contato" value=""/>
+
+                        <label class="sr-only" for="dateLastContact">Data Ultimo Contato</label>
+                        <input type="text" id="dateLastContact" name="dateLastContact"
+                            placeholder="Data Ultimo Contato" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="sendBy">Enviado por</label>
+                        <input type="text" id="sendBy" name="sendBy" placeholder="Enviado por" value=""/>
+
+                        <label class="sr-only" for="channelThatCame">Canal que veio</label>
+                        <input type="text" id="channelThatCame" name="channelThatCame" placeholder="Canal que veio" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="comoNosConheceu">Como nos Conheceu</label>
+                        <input type="text" id="comoNosConheceu" name="comoNosConheceu"
+                            placeholder="Como nos Conheceu" value=""/>
+                        <label class="sr-only" for="status">Status</label>
+                        <input type="text" id="status" name="status" placeholder="Status" value=""/>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="observacao">Observação</label>
+                        <textarea name="observacao" id="observacao" placeholder="Observação" value=""></textarea>
+                    </div>
+
+                    <div class="input-group actions">
+
+                        <a href="#" onclick="ModalEditLead.close()" class="button cancel">Cancelar</a>
+
+                        <button class="button editar">Editar</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="./JS/script.js"></script>
 
