@@ -143,6 +143,10 @@ button:hover{
     background-color: var(--lighte-green);
 }
 
+.button.editar{
+    background-color: rgb(18, 143, 245);
+}
+
 
 .button.cancel{
     background-color: var(--red);

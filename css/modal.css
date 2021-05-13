@@ -1,6 +1,6 @@
-/* Modal ======== */
+/* Modal-add-lead ======== */
 
-.modal-overlay{
+.modal-add-lead{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -11,9 +11,10 @@
     justify-content: center;
     opacity: 0;
     visibility: hidden;
+    z-index: 999;
 }
 
-.modal-overlay.active{
+.modal-add-lead.active{
     opacity: 1;
     visibility: visible;
 }
@@ -29,6 +30,27 @@
 .modal h2{
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Modal-edit-lead ======== */
+
+.modal-edit-lead{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999
+}
+
+.modal-edit-lead.active{
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Formulário Modal ======== */
