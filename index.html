@@ -18,7 +18,8 @@
                 <div id="menu">
                     <ul>
                         <li><a href="">Inicio</a></li>
-                        <li><a href="">Cadastro</a></li>
+                        <li><a href="">Cadastros</a></li>
+                        <li><a href="">Orçamentos Fechados</a></li>
                     </ul>
                 </div>
                 <div id="usuario">
@@ -96,7 +97,7 @@
         <div class="modal">
             <div class="form">
                 <h2>Adicionar Lead</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
 
                     <div class="input-group">
                         <label class="sr-only" for="nameClient">Nome do Cliente</label>
@@ -113,7 +114,7 @@
 
                     <div class="input-group">
                         <label class="sr-only" for="dateEvent">Data do Evento</label>
-                        <input type="text" id="dateEvent" name="dateEvent" placeholder="Data do Evento" />
+                        <input type="date" id="dateEvent" name="dateEvent" placeholder="Data do Evento" />
 
                         <label class="sr-only" for="emailClient">Telefone</label>
                         <input type="number" id="phoneClient" name="phoneClient" placeholder="Telefone" />
@@ -129,11 +130,11 @@
 
                     <div class="input-group">
                         <label class="sr-only" for="dateFirstContact">Data 1º contato</label>
-                        <input type="text" id="dateFirstContact" name="dateFirstContact"
+                        <input type="date" id="dateFirstContact" name="dateFirstContact"
                             placeholder="Data 1º contato" />
 
                         <label class="sr-only" for="dateLastContact">Data Ultimo Contato</label>
-                        <input type="text" id="dateLastContact" name="dateLastContact"
+                        <input type="date" id="dateLastContact" name="dateLastContact"
                             placeholder="Data Ultimo Contato" />
                     </div>
 

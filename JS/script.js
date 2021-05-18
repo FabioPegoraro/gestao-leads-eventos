@@ -5,9 +5,6 @@ const ModalAddLead = {
     close() {
         document.querySelector(".modal-add-lead").classList.remove("active");
     },
-    statusLead() {
-
-    },
 };
 
 const ModalEditLead = {
@@ -17,9 +14,7 @@ const ModalEditLead = {
     close() {
         document.querySelector(".modal-edit-lead").classList.remove("active");
     },
-    editar() {
-
-    },
+    editar() {},
 };
 
 const leads = [{
@@ -37,10 +32,9 @@ const leads = [{
     enviadoPor: "whatsApp",
     canalQueVeio: "site",
     comoNosConheceu: "google",
-    status: "Fechado",
-    statusCard: 'fechado',
+    status: "Negociação",
+    statusCard: "negociacao",
     observação: "TEste de textArea, será que deu certo?",
-
 },
 {
     id: 2,
@@ -58,7 +52,7 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Negociação",
-    statusCard: 'negociacao',
+    statusCard: "negociacao",
     observação: "TEste de textArea, será que deu certo?",
 },
 {
@@ -77,7 +71,7 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Follow",
-    statusCard: 'follow',
+    statusCard: "follow",
     observação: "TEste de textArea, será que deu certo?",
 },
 {
@@ -96,7 +90,7 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Fechamento",
-    statusCard: 'fechamento',
+    statusCard: "fechamento",
     observação: "TEste de textArea, será que deu certo?",
 },
 {
@@ -115,7 +109,7 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Fechado",
-    statusCard: 'fechado',
+    statusCard: "fechado",
     observação: "TEste de textArea, será que deu certo?",
 },
 {
@@ -134,11 +128,11 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Fechado",
-    statusCard: 'fechado',
+    statusCard: "fechado",
     observação: "TEste de textArea, será que deu certo?",
 },
 {
-    id: 6,
+    id: 7,
     name: "Samuel",
     tipoDeEvento: "Casamento",
     numeroConvidados: 150,
@@ -153,26 +147,26 @@ const leads = [{
     canalQueVeio: "site",
     comoNosConheceu: "google",
     status: "Follow",
-    statusCard: 'follow',
+    statusCard: "follow",
     observação: "TEste de textArea, será que deu certo?",
 },
-
 ];
 
 const DOM = {
 
     criarCard: document.querySelector("#cards-leads"),
+    // o index está sendo usado para passar a posição do lead no array
+    criarNovoCard(leads, index) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = DOM.innerHTMLCard(leads, index);
+        card.dataset.index = index
 
-    criarLead(leads, index) {
-        const card = document.createElement('div')
-        card.className = 'card'
-        card.innerHTML = DOM.innerHTMLCard(leads)
-
-        DOM.criarCard.appendChild(card)
+        DOM.criarCard.appendChild(card);
     },
 
-    innerHTMLCard(leads) {
-
+    
+    innerHTMLCard(leads, index) {
         const html = `
             <div class="idCliente">
                 <p>${leads.id}</p>
@@ -201,63 +195,238 @@ const DOM = {
             <div class="card-Button">
                 <a href="#" class="buttonEditar" onclick="ModalEditLead.open()"><img src="./img/edit-24.svg"
                 alt=""></a>
-                <a href="#" class="buttonExcluir" onclick="Cards.excluirCard()"><img src="./img/trash-24.svg"
+                <a href="#" class="buttonExcluir" onclick="Cards.removeLead(${index})"><img src="./img/trash-24.svg"
                 alt="Excluir Lead"></a>
             </div>
 
-            `
+            `;
 
         return html;
     },
 
-
+    clearCards() {
+        //pega a div e deixa ela vazia
+        DOM.criarCard.innerHTML = "";
+    },
 };
 
+const Utils = {
+
+    //formatando as datas
+    formatarDatas(date){
+
+        const separarData = date.split("-")
+
+        return `${separarData[2]}/${separarData[1]}/${separarData[0]}`
+
+    },
+}
+
 const Cardkamban = {
-
     updateCardKamban(element) {
+        const totalLeads = element;
 
-        const totalLeads = element
-
-        let totalFollow = []
-        let totalNegociacao = []
-        let totalFechamento = []
-        let totalFechado = []
+        let totalFollow = [];
+        let totalNegociacao = [];
+        let totalFechamento = [];
+        let totalFechado = [];
 
         for (i = 0; i < leads.length; i++) {
-            const element = leads[i].status;
-            if (element === "Follow") {
-                totalFollow.push(element)
-            }else if(element === "Negociação"){
-                totalNegociacao.push(element)
-            }else if(element === "Fechamento"){
-                totalFechamento.push(element)
-            }else{
-                totalFechado.push(element)
+            const statusdoLead = leads[i].status;
+            if (statusdoLead === "Follow") {
+                totalFollow.push(statusdoLead);
+            } else if (statusdoLead === "Negociação") {
+                totalNegociacao.push(statusdoLead);
+            } else if (statusdoLead === "Fechamento") {
+                totalFechamento.push(statusdoLead);
+            } else {
+                totalFechado.push(statusdoLead);
             }
         }
 
-        document.getElementById('totalLeads').innerHTML = totalLeads.length
-        document.getElementById('totalFollow').innerHTML = totalFollow.length
-        document.getElementById('totalNegociacao').innerHTML = totalNegociacao.length
-        document.getElementById('totalFechamento').innerHTML = totalFechamento.length
-    },
-
-}
-
-Cardkamban.updateCardKamban(leads)
-
-const Cards = {
-    adicionarCard() {
-        leads.forEach((element) => {
-            DOM.criarLead(element)
-        });
-    },
-    excluirCard() {
-        //Excluir o card
-        alert("Excluir Card");
+        document.getElementById("totalLeads").innerHTML = totalLeads.length;
+        document.getElementById("totalFollow").innerHTML = totalFollow.length;
+        document.getElementById("totalNegociacao").innerHTML =
+            totalNegociacao.length;
+        document.getElementById("totalFechamento").innerHTML =
+            totalFechamento.length;
     },
 };
 
-Cards.adicionarCard()
+const Cards = {
+    all: leads,
+
+    //adiciona um elemento em "leads" e atualiza a pagina
+    addLead(novoLead) {
+        Cards.all.push(novoLead);
+
+        App.reload();
+    },
+
+    removeLead(index) {
+        
+        // o index está sendo usado para passar a posição do lead no array e o segundo parametro serve para saber quantos elementos quer deletar
+        Cards.all.splice(index, 1);
+
+        App.reload();
+    },
+};
+
+const Form = {
+
+    // pegando dados do formulário do botão "adicionar novo lead"
+    name: document.querySelector("input#nameClient"),
+    tipoDeEvento: document.querySelector("input#typeEvent"),
+    numeroConvidados: document.querySelector("input#numberGuests"),
+    dataDoEvento: document.querySelector("input#dateEvent"),
+    telefone: document.querySelector("input#phoneClient"),
+    localDoEvento: document.querySelector("input#eventLocation"),
+    email: document.querySelector("input#emailClient"),
+    dataPrimeiroContato: document.querySelector("input#dateFirstContact"),
+    dataultimoContato: document.querySelector("input#dateLastContact"),
+    enviadoPor: document.querySelector("input#sendBy"),
+    canalQueVeio: document.querySelector("input#channelThatCame"),
+    comoNosConheceu: document.querySelector("input#comoNosConheceu"),
+    status: document.querySelector("input#status"),
+    observacao: document.querySelector("textarea#observacao"),
+
+    getValues() {
+        //pegando os valores de cada campo
+        return {
+            name: Form.name.value,
+            tipoDeEvento: Form.tipoDeEvento.value,
+            numeroConvidados: Form.numeroConvidados.value,
+            dataDoEvento: Form.dataDoEvento.value,
+            telefone: Form.telefone.value,
+            localDoEvento: Form.localDoEvento.value,
+            email: Form.email.value,
+            dataPrimeiroContato: Form.dataPrimeiroContato.value,
+            dataultimoContato: Form.dataultimoContato.value,
+            enviadoPor: Form.enviadoPor.value,
+            canalQueVeio: Form.canalQueVeio.value,
+            comoNosConheceu: Form.comoNosConheceu.value,
+            status: Form.status.value,
+            observacao: Form.observacao.value,
+        }
+    },
+
+    validarCampos() {
+        //Vendo se os campos estão vazios
+        const {name, tipoDeEvento, numeroConvidados, dataDoEvento,telefone, localDoEvento, email, dataPrimeiroContato, dataultimoContato, enviadoPor, canalQueVeio, comoNosConheceu, status, observacao} = Form.getValues()
+        
+        //trim() = serve para fazer uma limpeza de espaço vazio
+        if( name.trim() === "" || 
+            tipoDeEvento.trim() === "" ||
+            numeroConvidados.trim() === "" ||
+            dataDoEvento.trim() === "" ||
+            telefone.trim() === "" ||
+            localDoEvento.trim() === "" ||
+            email.trim() === "" ||
+            dataPrimeiroContato.trim() === "" || 
+            dataultimoContato.trim() === "" ||
+            enviadoPor.trim() === "" ||
+            canalQueVeio.trim() === "" ||
+            comoNosConheceu.trim() === "" ||
+            status.trim() === ""){
+                throw new Error("Por favor, preencha todos os campos")
+        }
+        
+    },
+
+    formatarValores() {
+        let {name, tipoDeEvento, numeroConvidados, dataDoEvento,telefone, localDoEvento, email, dataPrimeiroContato, dataultimoContato, enviadoPor, canalQueVeio, comoNosConheceu, status, observacao} = Form.getValues()
+
+        dataDoEvento = Utils.formatarDatas(dataDoEvento)
+
+        dataPrimeiroContato = Utils.formatarDatas(dataPrimeiroContato)
+
+        dataultimoContato = Utils.formatarDatas(dataultimoContato)
+
+        return {
+            name,
+            tipoDeEvento,
+            numeroConvidados,
+            dataDoEvento,
+            telefone,
+            localDoEvento,
+            email,
+            dataPrimeiroContato,
+            dataultimoContato,
+            enviadoPor,
+            canalQueVeio,
+            comoNosConheceu,
+            status,
+            observacao
+            
+        }
+        console.log(status)
+        
+    },
+
+    salvarDadosNovoLead(dadosFormatados){
+        Cards.addLead(dadosFormatados)
+    },
+
+    clearDadosModal(){
+        Form.name.value = ""
+        Form.tipoDeEvento.value = ""
+        Form.numeroConvidados.value = ""
+        Form.dataDoEvento.value = ""
+        Form.telefone.value = ""
+        Form.localDoEvento.value = ""
+        Form.email.value = ""
+        Form.dataPrimeiroContato.value = ""
+        Form.dataultimoContato.value = ""
+        Form.enviadoPor.value = ""
+        Form.canalQueVeio.value = ""
+        Form.comoNosConheceu.value = ""
+        Form.status.value = ""
+        Form.observacao.value = ""
+    },
+
+    submit(event) {
+        event.preventDefault();
+
+        try {
+            // Validar campos
+            Form.validarCampos();
+            //formatar os dados para salvar
+            const dadosFormatados = Form.formatarValores()
+            
+            //salvar 
+            Form.salvarDadosNovoLead(dadosFormatados)
+
+            //apagar os dados do formulario
+            Form.clearDadosModal()
+
+            //modal feche
+            ModalAddLead.close()
+
+
+        } catch (error) {
+            alert(error.message)
+        }    
+
+    },
+};
+
+const App = {
+    //inicia a aplicação
+    init() {
+        Cardkamban.updateCardKamban(leads);
+
+        //adiona um card para cada lead
+        // o index está sendo usado para passar a posição do lead no array
+        Cards.all.forEach((novoLead, index) => {
+            DOM.criarNovoCard(novoLead, index);
+        });
+    },
+    reload() {
+        //limpa a pagina e inicia
+        DOM.clearCards();
+        App.init();
+    },
+};
+
+App.init();
 
