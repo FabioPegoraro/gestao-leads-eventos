@@ -1,6 +1,6 @@
 /* Modal-add-lead ======== */
 
-.modal-add-lead{
+.modal-add-lead {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -14,27 +14,27 @@
     z-index: 999;
 }
 
-.modal-add-lead.active{
+.modal-add-lead.active {
     opacity: 1;
     visibility: visible;
 }
 
-.modal{
+.modal {
     background: #f0f2f5;
     padding: 1.2rem;
-    width: 700px ;
+    width: 700px;
     height: 750px;
     border-radius: 20px;
 }
 
-.modal h2{
+.modal h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
 /* Modal-edit-lead ======== */
 
-.modal-edit-lead{
+.modal-edit-lead {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -48,116 +48,141 @@
     z-index: 999
 }
 
-.modal-edit-lead.active{
+.modal-edit-lead.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Formulário Modal ======== */
 
-input{
+
+/* Formulário Modal Criar Lead======== */
+
+input {
     border: none;
     margin: 5px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     align-items: center;
     padding: .3rem;
+    position: relative;
 }
 
-#nameClient{
+#nameClient {
     width: 100%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#typeEvent{
+#typeEvent {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#numberGuests{
+#numberGuests {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#dateEvent{
+#dateEvent {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#phoneClient{
+#phoneClient {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#eventLocation{
+#eventLocation {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#emailClient{
+#emailClient {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#dateFirstContact{
+#dateFirstContact {
+    width: 33%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+
+#dateLastContact {
+    width: 33%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+#dateNextContact {
+    width: 33%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+}
+
+.label-name {
+    width: 33%;
+    position: absolute;
+    color: rgb(116, 115, 114);
+    font-weight: bold;
+    top: -5px;
+    text-align: center;
+
+}
+
+
+#sendBy {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#dateLastContact{
-    width: 49%;
-    padding: 8px;
-    font-size: 1.4rem;
-    border-radius: 10px;
-} 
-
-#sendBy{
+#channelThatCame {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#channelThatCame{
+#comoNosConheceu {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#comoNosConheceu{
+#status {
     width: 49%;
     padding: 8px;
     font-size: 1.4rem;
     border-radius: 10px;
 }
 
-#status{
-    width: 49%;
-    padding: 8px;
-    font-size: 1.4rem;
-    border-radius: 10px;
-}
-
-#observacao{
+#observacao {
     width: 100%;
     height: 150px;
     padding: 6px;
@@ -167,15 +192,13 @@ input{
     resize: none;
 }
 
-.input-group.actions{
+.input-group.actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .input-group.actions .button,
-.input-group.actions button{
+.input-group.actions button {
     width: 40%;
 }
-
-

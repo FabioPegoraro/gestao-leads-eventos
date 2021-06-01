@@ -36,25 +36,29 @@
     <main class="container">
         <section class="kamban">
             <div class="cardKamban" id="cardTotalLeads">
-                <h3>Total Leads</h3>
                 <p id="totalLeads"></p>
+                <h3>Total Leads</h3>
             </div>
 
 
             <div class="cardKamban" id="cardFollow">
-                <h3>Follow</h3>
                 <p id="totalFollow"></p>
+                <h3>Follow</h3>
             </div>
 
             <div class="cardKamban" id="cardNegociacao">
-                <h3>Em Negociação</h3>
                 <p id="totalNegociacao"></p>
+                <h3>Em Negociação</h3>
             </div>
 
 
             <div class="cardKamban" id="cardFechamento">
-                <h3>Fechamento</h3>
                 <p id="totalFechamento"></p>
+                <h3>Fechamento</h3>
+            </div>
+            <div class="cardKamban" id="cardFechado">
+                <p id="totalFechado"></p>
+                <h3>Fechado</h3>
             </div>
         </section>
 
@@ -67,7 +71,6 @@
         <section class="cards" id="cards-leads">
             <div class="card-header">
                 <div class="idCliente">
-
                 </div>
                 <div class="name">
                     <h4>Cliente</h4>
@@ -214,10 +217,15 @@
                         <label class="sr-only" for="dateFirstContact">Data 1º contato</label>
                         <input type="text" id="dateFirstContact" name="dateFirstContact"
                             placeholder="Data 1º contato" value=""/>
+                            
 
-                        <label class="sr-only" for="dateLastContact">Data Ultimo Contato</label>
+                        <label class="sr-only"for="dateLastContact">Data Ultimo Contato</label>
                         <input type="text" id="dateLastContact" name="dateLastContact"
                             placeholder="Data Ultimo Contato" value=""/>
+
+                        <label class="sr-only" for="dateNextContact">Data Proximo Contato</label>
+                        <input type="text" id="dateNextContact" name="dateNextContact"
+                            placeholder="Data Proximo Contato" value=""/>
                     </div>
 
                     <div class="input-group">

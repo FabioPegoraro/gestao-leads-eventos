@@ -18,143 +18,162 @@ const ModalEditLead = {
 };
 
 const leads = [{
-    id: 1,
-    name: "Maise",
-    tipoDeEvento: "Aniversário",
-    numeroConvidados: 50,
-    dataDoEvento: "09/12/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "10/05/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Negociação",
-    statusCard: "negociacao",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 2,
-    name: "Edson",
-    tipoDeEvento: "Aniversário",
-    numeroConvidados: 80,
-    dataDoEvento: "25/07/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "01/06/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Negociação",
-    statusCard: "negociacao",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 3,
-    name: "Edna",
-    tipoDeEvento: "Casamento",
-    numeroConvidados: 200,
-    dataDoEvento: "26/10/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "25/08/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Follow",
-    statusCard: "follow",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 4,
-    name: "Fabio",
-    tipoDeEvento: "Confraternização",
-    numeroConvidados: 20,
-    dataDoEvento: "19/05/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "10/05/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Fechamento",
-    statusCard: "fechamento",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 5,
-    name: "Logan",
-    tipoDeEvento: "Confraternização",
-    numeroConvidados: 10,
-    dataDoEvento: "02/05/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "06/05/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Fechado",
-    statusCard: "fechado",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 6,
-    name: "Felipe",
-    tipoDeEvento: "Casamento",
-    numeroConvidados: 35,
-    dataDoEvento: "06/05/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "06/05/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Fechado",
-    statusCard: "fechado",
-    observação: "TEste de textArea, será que deu certo?",
-},
-{
-    id: 7,
-    name: "Samuel",
-    tipoDeEvento: "Casamento",
-    numeroConvidados: 150,
-    dataDoEvento: "06/05/2021",
-    telefone: 11947728801,
-    localDoEvento: "São Paulo",
-    email: "fabio@teste.com.br",
-    dataPrimeiroContato: "01/04/21",
-    dataultimoContato: "28/04/21",
-    proximoContato: "06/05/21",
-    enviadoPor: "whatsApp",
-    canalQueVeio: "site",
-    comoNosConheceu: "google",
-    status: "Follow",
-    statusCard: "follow",
-    observação: "TEste de textArea, será que deu certo?",
-},
+        codigoCliente: 1001,
+        name: "Maise",
+        tipoDeEvento: "Aniversário",
+        numeroConvidados: 50,
+        dataDoEvento: "09/12/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "10/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Negociação",
+        statusCard: "negociacao",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 1051,
+        name: "Edson",
+        tipoDeEvento: "Aniversário",
+        numeroConvidados: 80,
+        dataDoEvento: "25/07/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "01/06/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Negociação",
+        statusCard: "negociacao",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 2090,
+        name: "Edna",
+        tipoDeEvento: "Casamento",
+        numeroConvidados: 200,
+        dataDoEvento: "26/10/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "25/08/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Follow",
+        statusCard: "follow",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 1005,
+        name: "Fabio",
+        tipoDeEvento: "Confraternização",
+        numeroConvidados: 20,
+        dataDoEvento: "19/05/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "10/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Fechamento",
+        statusCard: "fechamento",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 1034,
+        name: "Logan",
+        tipoDeEvento: "Confraternização",
+        numeroConvidados: 10,
+        dataDoEvento: "02/05/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "06/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Fechado",
+        statusCard: "fechado",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 6258,
+        name: "Felipe",
+        tipoDeEvento: "Casamento",
+        numeroConvidados: 35,
+        dataDoEvento: "06/05/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "06/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Fechado",
+        statusCard: "fechado",
+        observação: "TEste de textArea, será que deu certo?",
+    },
+    {
+        codigoCliente: 3625,
+        name: "Samuel",
+        tipoDeEvento: "Casamento",
+        numeroConvidados: 150,
+        dataDoEvento: "06/05/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "06/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Follow",
+        statusCard: "follow",
+        observação: "TEste de textArea, será que deu certo?",
+    }, {
+        codigoCliente: 1002,
+        name: "Maise",
+        tipoDeEvento: "Aniversário",
+        numeroConvidados: 50,
+        dataDoEvento: "09/12/2021",
+        telefone: 11947728801,
+        localDoEvento: "São Paulo",
+        email: "fabio@teste.com.br",
+        dataPrimeiroContato: "01/04/21",
+        dataultimoContato: "28/04/21",
+        proximoContato: "10/05/21",
+        enviadoPor: "whatsApp",
+        canalQueVeio: "site",
+        comoNosConheceu: "google",
+        status: "Negociação",
+        statusCard: "negociacao",
+        observação: "TEste de textArea, será que deu certo?",
+    },
 ];
 
 const DOM = {
 
     criarCard: document.querySelector("#cards-leads"),
+    cardHeader: document.querySelector(".card-header"),
     // o index está sendo usado para passar a posição do lead no array
     criarNovoCard(leads, index) {
         const card = document.createElement("div");
@@ -165,11 +184,12 @@ const DOM = {
         DOM.criarCard.appendChild(card);
     },
 
-    
     innerHTMLCard(leads, index) {
+
+
         const html = `
-            <div class="idCliente">
-                <p>${leads.id}</p>
+            <div class="codigoCliente" >
+                <p>${leads.codigoCliente}</p>
             </div>
 
             <div class="cardName">
@@ -205,20 +225,59 @@ const DOM = {
     },
 
     clearCards() {
+        DOM.cardHeader.innerHTML = "Deu certo"
         //pega a div e deixa ela vazia
-        DOM.criarCard.innerHTML = "";
+        DOM.criarCard.innerHTML = `<div class="card-header">
+        <div class="codigoCliente">
+            <h4>Código</h4>
+        </div>
+        <div class="name">
+            <h4>Cliente</h4>
+        </div>
+
+        <div class="numberConvidados">
+            <h4>Nº de Convidados</h4>
+        </div>
+
+        <div class="dateFesta">
+            <h4>Data do Evento</h4>
+        </div>
+
+        <div class="status">
+            <h4>Status</h4>
+        </div>
+
+        <div class="nextContato">
+            <h4>Proximo Contato</h4>
+        </div>
+    </div>`;
     },
 };
 
 const Utils = {
 
     //formatando as datas
-    formatarDatas(date){
+    formatarDatas(date) {
 
         const separarData = date.split("-")
 
         return `${separarData[2]}/${separarData[1]}/${separarData[0]}`
+    },
 
+    //Verificando o status do lead e passando o statusCard
+    statusCardCliente(status) {
+
+        const statusDoLead = status
+
+        if (statusDoLead === "Fechado") {
+            return 'fechado'
+        } else if (statusDoLead === "Negociação") {
+            return 'negociacao'
+        } else if (statusDoLead === "Follow") {
+            return 'follow'
+        } else if (statusDoLead === "Fechamento") {
+            return 'fechamento'
+        }
     },
 }
 
@@ -250,6 +309,8 @@ const Cardkamban = {
             totalNegociacao.length;
         document.getElementById("totalFechamento").innerHTML =
             totalFechamento.length;
+        document.getElementById("totalFechado").innerHTML =
+            totalFechado.length;
     },
 };
 
@@ -264,7 +325,7 @@ const Cards = {
     },
 
     removeLead(index) {
-        
+
         // o index está sendo usado para passar a posição do lead no array e o segundo parametro serve para saber quantos elementos quer deletar
         Cards.all.splice(index, 1);
 
@@ -312,35 +373,69 @@ const Form = {
 
     validarCampos() {
         //Vendo se os campos estão vazios
-        const {name, tipoDeEvento, numeroConvidados, dataDoEvento,telefone, localDoEvento, email, dataPrimeiroContato, dataultimoContato, enviadoPor, canalQueVeio, comoNosConheceu, status, observacao} = Form.getValues()
-        
+        const {
+            name,
+            tipoDeEvento,
+            numeroConvidados,
+            dataDoEvento,
+            telefone,
+            localDoEvento,
+            email,
+            dataPrimeiroContato,
+            dataultimoContato,
+            enviadoPor,
+            canalQueVeio,
+            comoNosConheceu,
+            status,
+            observacao
+        } = Form.getValues()
+
         //trim() = serve para fazer uma limpeza de espaço vazio
-        if( name.trim() === "" || 
+        if (name.trim() === "" ||
             tipoDeEvento.trim() === "" ||
             numeroConvidados.trim() === "" ||
             dataDoEvento.trim() === "" ||
             telefone.trim() === "" ||
             localDoEvento.trim() === "" ||
             email.trim() === "" ||
-            dataPrimeiroContato.trim() === "" || 
+            dataPrimeiroContato.trim() === "" ||
             dataultimoContato.trim() === "" ||
             enviadoPor.trim() === "" ||
             canalQueVeio.trim() === "" ||
             comoNosConheceu.trim() === "" ||
-            status.trim() === ""){
-                throw new Error("Por favor, preencha todos os campos")
+            status.trim() === "") {
+            throw new Error("Por favor, preencha todos os campos")
         }
-        
+
     },
 
     formatarValores() {
-        let {name, tipoDeEvento, numeroConvidados, dataDoEvento,telefone, localDoEvento, email, dataPrimeiroContato, dataultimoContato, enviadoPor, canalQueVeio, comoNosConheceu, status, observacao} = Form.getValues()
+        let {
+            name,
+            tipoDeEvento,
+            numeroConvidados,
+            dataDoEvento,
+            telefone,
+            localDoEvento,
+            email,
+            dataPrimeiroContato,
+            dataultimoContato,
+            enviadoPor,
+            canalQueVeio,
+            comoNosConheceu,
+            status,
+            statusCard,
+            observacao
+        } = Form.getValues()
 
         dataDoEvento = Utils.formatarDatas(dataDoEvento)
 
         dataPrimeiroContato = Utils.formatarDatas(dataPrimeiroContato)
 
         dataultimoContato = Utils.formatarDatas(dataultimoContato)
+
+        statusCard = Utils.statusCardCliente(status)
+        console.log(statusCard)
 
         return {
             name,
@@ -356,18 +451,19 @@ const Form = {
             canalQueVeio,
             comoNosConheceu,
             status,
+            statusCard,
             observacao
-            
+
         }
         console.log(status)
-        
+
     },
 
-    salvarDadosNovoLead(dadosFormatados){
+    salvarDadosNovoLead(dadosFormatados) {
         Cards.addLead(dadosFormatados)
     },
 
-    clearDadosModal(){
+    clearDadosModal() {
         Form.name.value = ""
         Form.tipoDeEvento.value = ""
         Form.numeroConvidados.value = ""
@@ -389,10 +485,10 @@ const Form = {
 
         try {
             // Validar campos
-            Form.validarCampos();
+            // Form.validarCampos();
             //formatar os dados para salvar
             const dadosFormatados = Form.formatarValores()
-            
+
             //salvar 
             Form.salvarDadosNovoLead(dadosFormatados)
 
@@ -405,7 +501,7 @@ const Form = {
 
         } catch (error) {
             alert(error.message)
-        }    
+        }
 
     },
 };
@@ -429,4 +525,3 @@ const App = {
 };
 
 App.init();
-

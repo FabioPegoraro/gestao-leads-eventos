@@ -39,6 +39,10 @@
     background-color: rgb(59, 243, 22);
 }
 
+#cardFechado{
+    background-color: rgb(45, 155, 23);
+}
+
 /* Card-Header ================*/
 
 .card-header{
@@ -49,19 +53,25 @@
     margin-bottom: 5px;
     align-items: center;
     border-radius: 5px;
+
 }
 
-.idCliente{
+.codigoCliente{
     width: 50px;
     text-align: center;
-    font-size: 1.2rem ;
-    opacity: 0.6;
+
+}
+
+.codigoCliente{
+    margin: 2px;
+    width: 60px;
+    text-align: center;
 }
 
 .card-header .name{
     width: 300px;
     text-align:justify;
-    margin-left: 5px;
+    text-align: center;
 }
 
 .card-header .numberConvidados{
@@ -88,6 +98,7 @@
 
 .card{
     width: 90%;
+    max-width: 100%;
     margin-left: 5%;
     display:flex;
     height: 40px;
@@ -101,7 +112,7 @@
 
 .card .cardName{
     width: 300px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .card .cardNumberConvidados{
@@ -133,7 +144,7 @@
 }
 
 .card-status.fechado{
-    background-color: rgb(25, 121, 6);
+    background-color: rgb(45, 155, 23);
 }
 
 .cardNextContato {
